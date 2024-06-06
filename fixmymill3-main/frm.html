@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixmymill | Equipment Services</title>
+    <link rel="icon" href="images/Favicon.webp" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="frm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet"> -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N3RTPTDP');</script>
+    <meta name="google-site-verification" content="f2F1KLeNkcoPgYASaW2BuSqFjqr5z_zal6WfWg-uo8g" />
+
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-default fixed-top bg-black">
+        <div class="container-fluid">
+            <a href="./index.html">
+                <img src="./images/Main logo Fix (1).svg" alt="Main logo Fix (4).png"  class="image-nav" style="width:257px;height:90px;object-fit:cover" width="auto" height="118">
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+                <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav m-lg-auto">
+            <li class="nav-item text-center pt-3 pt-lg-0">
+                <a class="nav-link nav-ele"   href="about.html">About Us</a>
+              </li>
+              <li class="nav-item text-center pt-3 pt-lg-0">
+                <a class="nav-link nav-ele"  href="service.html">Services</a>
+              </li>
+              <li class="nav-item text-center pt-3 pt-lg-0">
+                <a class="nav-link nav-ele"  href="faq.html">FAQ</a>
+              </li>
+              <li class="nav-item text-center pt-3 pt-lg-0">
+                <a class="nav-link nav-ele"  href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div class="wrap" >
+        <nav class="first" >
+            <nav class="nav-container ">
+                <h1 >Doorstep Service @ Home</h1>
+            </nav>
+        </nav>
+
+        <div class="whatdiv">
+            <a href="https://wa.me/+918062177481" >
+              <img  class="whatsapp-chat"  src="./images/fixmymillwhatsapplog.webp" alt="whatsapp-chat"/>
+            </a>
+        </div> 
+
+        <div class="wrapper">
+            <!--Nav Bar-->
+            <navbar class="flex-row" id="navLink">
+                <div class="wrap-nav">
+                    <a href="#" id="">Step 1</a>
+                    <a href="#">Step 2</a>
+                    <a href="#">Step 3</a>
+                </div>
+
+
+            </navbar>
+
+            <!--Step - 1-->
+            <section class="section1">
+                <div class="container">
+
+                    <div class="booking-slot wizard">
+                        <!--form1.php-->
+                        <form name="basicform" id="basicform" method="post" action="form2.php" autocomplete="on">
+                            <!-- Nav tabs -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="step1">
+                                    <div class="slot-desp step-1">
+                                        <!-- <form> -->
+                                        <div id="sf1" class="frm">
+                                            <fieldset id="form-wrap">
+                                                <div class="form-group">
+
+
+                                                    <select name="city" id="city"
+                                                        class="form-control rounded-pill has-validation"
+                                                        onChange="Changecity()" autocomplete="off"
+                                                        aria-describedby="inputGroupPrepend" required
+                                                        onclick="selFun(this)">
+                                                        <option value="" selected disabled>Select city</option>
+                                                        <option value="Visakhapatnam">Visakhapatnam</option>
+                                                        <option value="Bangalore">Bangalore</option>
+                                                        <option value="Trivandrum">Trivandrum</option>
+                                                        <option value="Vijayawada">Vijayawada</option>
+                                                        <option value="Mysore">Mysore</option>
+                                                        <option value="Chennai">Chennai</option>
+                                                        <option value="Coimbatore">Coimbatore</option>
+                                                        <option value="Puducherry">Puducherry</option>
+
+                                                        <option value="Hyderabad">Hyderabad</option>
+
+                                                        <option value="Kolkata">Kolkata</option>
+
+                                                        <option value="Mumbai">Mumbai</option>
+                                                        <option value="Nagpur">Nagpur</option>
+
+
+
+                                                    </select>
+                                                    <div class="error" id="city">Please select a city</div>
+
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="clearfix"></div>
+
+                                                <div class="form-group">
+                                                    <input name="code" id="code" type="text"
+                                                        class="form-control validate[required,custom[integer]] rounded-pill"
+                                                        autocomplete="off" placeholder="Pincode*" maxlength="6"
+                                                        onkeyup="validatePincode(this)">
+                                                    <div for="code" generated="true" class="error">please enter a valid
+                                                        number.
+                                                    </div>
+                                                    <div class="error pin-error" name="pinerror" id="pinerror"
+                                                        style="display:none; margin-top: 20px; color:red  !important; position: relative;">
+                                                        <!--Oops! Looks like your area is not covered. Drop in an email we
+                                                        will
+                                                        get back--> Please enter a correct Pincode
+                                                        to you. <a href="index.php#contact-home">Click Here</a></div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+
+
+
+
+                                                <div class="clearfix"></div>
+                                                <div class="form-group">
+                                                    <select name="Product" id="product"
+                                                        class="form-control validate[required] rounded-pill"
+                                                        onclick="selFun(this)">
+                                                        <option value selected disabled> Select Product</option>
+                                                        <option value="Treadmill">Treadmill</option>
+                                                        <option value="exercise bike">Exercise Bike</option>
+                                                        <option value="Cross Trainer">Cross Trainer</option>
+                                                    </select>
+                                                    <div class="error" id="product">Please select a product</div>
+                                                    <div class="clearfix"></div>
+
+
+
+                                                </div>
+                                                <div class="clearfix"></div>
+
+
+                                                <div class="form-group">
+                                            
+                                                    <select name="brand" id="brand" class="form-control rounded-pill"
+                                                        >
+                                                        <option value="" selected disabled>Brand</option>
+                                                        <!-- 0, Indian Cycle: 1 : Imported Bicycle, 2 : Electric Bicycle -->
+                                                        <!-- <option data-brand="2">LIGHTSPEED</option> -->
+
+                                                        <option>POWERMAX</option>
+                                                        <option>REACH</option>
+                                                        <option>CULTSPORT</option>
+                                                        <option>AEROFIT</option>
+                                                        <option>FITKING</option>
+                                                        <option>LIFELONG</option>
+                                                        <option>HERCULES</option>
+                                                        <option>LIFELONG</option>
+                                                        <option>RPM FITNESS</option>
+                                                        <option>FITKIT</option>
+                                                        <option>LIFELINE</option>
+                                                        <option>MAXPRO</option>
+                                                        <option>WELCARE</option>
+                                                        <option>STUNNER</option>
+                                                        <option>Others</option>
+                                                        <!-- <option data-brand="2">ELECTRIC BICYCLE</option>
+                                                        <option data-brand="0">Angry Birds</option>
+                                                        <option data-brand="0">Atlas</option>
+                                                        <option data-brand="1">Author</option>
+                                                        <option data-brand="1">Bergamont</option>
+                                                        <option data-brand="1">Bianchi</option>
+                                                        <option data-brand="0">BSA</option>
+                                                        <option data-brand="1">BMC</option>
+                                                        <option data-brand="1">Btwin</option>
+                                                        <option data-brand="1">Cannondale</option>
+                                                        <option data-brand="1">Cervelo</option>
+                                                        <option data-brand="0">Cosmic</option>
+                                                        <option data-brand="1">Colnago</option>
+                                                        <option data-brand="1">Cube</option>
+                                                        <option data-brand="2">Elektron</option> -->
+                                                        <!-- <option data-brand="0">HLX - NMC</option>
+                                                        <option data-brand="0">Hollicy</option>
+                                                        <option data-brand="0">EZ Playmates</option>
+                                                        <option data-brand="1">Dahon</option>
+                                                        <option data-brand="1">Ducati</option>
+                                                        <option data-brand="1">Decathalon</option>
+                                                        <option data-brand="0">Firefox</option>
+                                                        <option data-brand="0">FitTrip</option>
+                                                        <option data-brand="0">Frog</option>
+                                                        <option data-brand="1">Focus</option>
+                                                        <option data-brand="1">Fomas</option>
+                                                        <option data-brand="1">Freemotion</option>
+                                                        <option data-brand="1">Fuji</option>
+                                                        <option data-brand="1">Fyxation</option>
+                                                        <option data-brand="1">Giant</option>
+                                                        <option data-brand="1">Ghost</option>
+                                                        <option data-brand="1">Goldie</option>
+                                                        <option data-brand="1">GT</option>
+                                                        <option data-brand="1">Haibike</option>
+                                                        <option data-brand="0">Hercules</option>
+                                                        <option data-brand="0">Hero</option>
+                                                        <option data-brand="1">Huffy Bicycles</option>
+                                                        <option data-brand="1">Java</option>
+                                                        <option data-brand="1">KHS</option>
+                                                        <option data-brand="1">Kona</option>
+                                                        <option data-brand="0">Kross</option>
+                                                        <option data-brand="0">LA Sovereign</option>
+                                                        <option data-brand="1">Lapierre</option>
+                                                        <option data-brand="1">Liv</option>
+                                                        <option data-brand="1">Look Cycle</option>
+                                                        <option data-brand="0">Mach City</option>
+                                                        <option data-brand="1">Merida</option>
+                                                        <option data-brand="1">Mongoose</option>
+                                                        <option data-brand="1">Montague</option>
+                                                        <option data-brand="0">Montra</option>  -->
+                                                    </select>
+                                                    <div class="clearfix"></div>
+
+                                                    <div class="brand-notif" style="display: none;">
+                                                        <p class="font-med">You have chosen an Imported Bicycle</p>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+
+
+
+
+                                                    <div class="brand-notifed" style="display: none;">
+                                                        <p class="font-med">If bicycle brand is an imported one, Rs.1199
+                                                            or
+                                                            1399
+                                                            will be the package cost</p>
+                                                    </div>
+
+                                                </div>
+                                                <div class="clearfix"></div>
+
+
+
+                                                <div class="form-group">
+                                                    <input type="text" name="name" id="name"
+                                                        class="form-control validate[required] rounded-pill"
+                                                        placeholder="Name*" autocomplete="off"
+                                                        onkeyup="validateName(this)">
+                                                    <div for="code" generated="true" class="error">please enter a valid
+                                                        name.</div>
+
+                                                    <div class="error" id="name-error"></div>
+                                                </div>
+                                                <div class="clearfix"></div>
+
+
+
+                                                <div class="form-group">
+                                                    <input type="tel" name="phone" id="phone"
+                                                        class="form-control validate[required,custom[integer]] rounded-pill"
+                                                        autocomplete="off" placeholder="Phone*" maxlength="10"
+                                                        onkeyup="validatePhone(this)" required>
+                                                    <div for="code" generated="true" class="error">please enter a valid
+                                                        phone
+                                                        number.</div>
+
+                                                </div>
+                                                <div class="error" id="phone-error"></div>
+
+                                                <div class="clearfix"></div>
+                                                <div class="form-group">
+                                                    <input type="text" name="email" id="email"
+                                                        class="form-control validate[required] rounded-pill"
+                                                        placeholder="Email*" onkeyup="validateEmail(this)">
+                                                    <div for="code" generated="true" class="error">please enter a valid
+                                                        email.</div>
+
+                                                </div>
+                                                <div class="error" id="email-error"></div>
+
+                                                <div class="clearfix"></div>
+
+
+
+
+                                                <div class="clearfix"></div>
+
+                                            </fieldset>
+                                        </div>
+                                    </div>
+
+                                </div>
+                        </form>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <!--Step - 2-->
+
+            <section class="section2">
+                <div class="step2" >
+
+                </div>
+
+            </section>
+            <!--Step - 3-->
+
+            <section class="section3 ">
+
+                <fieldset>
+                    <div class="slot-desp step-3">
+                        <div class="form-group step3-group">
+                            <input type="date" name="datepicker1" id="date"
+                                class="form-control validate[required] rounded-pill" placeholder="dd-mm-yyyy"
+                                autocomplete="off" min="" required onchange="selFun(this)">
+                            <div class="errorStep3" style="color: red;"></div>
+
+                        </div>
+                    </div>
+                    <script>
+
+                        // // Create a new Date object to represent the current date
+                        // var currentDate = new Date();
+
+                        // // Get the current year, month, and day
+                        // var currentYear = currentDate.getFullYear();
+                        // var currentMonth = (currentDate.getMonth() + 1).toString().padStart(2, '0'); // Month is 0-indexed
+                        // var currentDay = currentDate.getDate().toString().padStart(2, '0');
+
+                        // // Format the date as "YYYY-MM-DD" for the min attribute
+                        // var formattedDate = `${currentYear}-${currentMonth}-${currentDay}`;
+
+                        // const today = new Date();
+                        // const tomorrow = new Date(today);
+                        // tomorrow.setDate(today.getDate() + 1);
+
+                        // const year = tomorrow.getFullYear();
+                        // const month = (tomorrow.getMonth() + 1).toString().padStart(2, '0'); // Month is zero-based, so add 1
+                        // const date = tomorrow.getDate().toString().padStart(2, '0');
+
+                        // const formattedDate = `${year}-${month}-${date}`;
+                        // document.getElementById("date").addEventListener("click",(e)=>{
+                        //     console.log(e.target)
+                        // })
+
+                        // // Set the min attribute of the input element
+                        // document.getElementById("date").setAttribute("min", formattedDate);
+                    </script>
+                    <div class="form-group step3-group">
+                        <select name="slot" id="response" class="form-control rounded-pill" required
+                            onchange="selFun(this)">
+                            <option value="">Select slot</option>
+                            <option value="9:00AM-10:00AM">9:00AM-10:00AM</option>
+                            <option value="11:00PM-12:00PM">11:00AM-12:00PM</option>
+                            <option value="12:00PM-1:00PM">12:00PM-1:00PM</option>
+                            <option value="1:00AM-2:00AM">1:00M-2:00AM</option>
+                            <option value="3:00PM-4:00PM">3:00PM-4:00PM</option>
+                            <option value="5:00PM-6:00PM">5:00PM-6:00PM</option>
+                        </select>
+                        <div class="errorStep3" style="color: red;"></div>
+                    </div>
+
+                    <div class="form-group step3-group">
+                        <input type="text" name="address" id="address"
+                            class="form-control validate[required] rounded-pill" placeholder="Address*"
+                            autocomplete="off" required onkeyup="validateAddress(this)">
+                        <div class="errorStep3" style="color: red;"></div>
+
+                    </div>
+
+                    <div class="form-check step3-group" id="check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" required>
+                        <label class="form-check-label" for="defaultCheck1">
+                            I agree to these <a href="./responsibilities.html" style="text-decoration:underline; color: black;">Terms and
+                                Conditions</a>. </label>
+                                
+                        <div class="errorStep3" style="color: red;"></div>
+
+                    </div>
+
+
+
+                    <div role="tabpanel" class="tab-pane" id="step4">
+                        <div id="sf4" class="frm">
+                            <fieldset>
+                                <div class="slot-desp step-4">
+
+                                    <div class="price-calculation">
+                                        <div class="access-calc botrder_top">
+                                            <div class="plusmins">
+                                                <div class="plusleft">
+
+                                                </div>
+
+                                                <h6 class="total-amt clr-black2"><span
+                                                        style="font-family: GothamRoundedMedium ;font-weight: 700;">Selected
+                                                        Service</span><span class="amt " id="summaryTotfi"><i id="bill"
+                                                            style="text-align: end;">Bill name</i> </span>
+                                                </h6>
+
+                                            </div>
+                                            <div class="clearfix"></div>
+
+
+
+                                            <h6 class="total-amt clr-black1"><span
+                                                    style="font-family: GothamRoundedMedium ; font-weight: 700;">Total Summary</span><span
+                                                    class="amt " id="summaryTotfi"><i id="price">0/- </i></span></h6>
+                                            <h6 class="total-amt clr-black1" id="Discount"><span
+                                                        style="font-family: GothamRoundedMedium ; font-weight: 700;">Discount</span><span
+                                                        class="amt " id="summaryTotfi"><i> 0% </i></span></h6>
+                                            
+                                            <!--Edit here for name change-->
+                                            <h6 class="total-amt clr-black3"><span
+                                                    style="font-family: GothamRoundedMedium ;font-weight: 700;">Amount to Pay</span><span
+                                                    class="amt "  id="summaryTotfi"><i id="paid-amt">0/- </i></span></h6>
+                                            <!--Edit here for name change-->
+                                                
+                                            <!--radio buttons-->
+
+                                                <div class="total-amt clr-black4">
+                                                <label for="pay Now">
+                                                    <input type="radio" id="paynow" name="payment" value="paynow"  >
+                                                    Pay Now (10% off)
+                                                </label>
+                                                <label for="pay afetr installation">
+                                                    <input type="radio" id="paylater" name="payment" value="paylater">
+                                                    Pay After Service
+                                                </label>
+                                            </div>
+                                        
+                        
+                                            
+
+
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+
+
+
+                                </div>
+
+                                <div class="clearfix"></div>
+
+                                <p class="caution-note font-reg clr-white" style="font-size: small, position:relative">*Any new spares
+                                    will be charged extra as per
+                                    the cost</p>
+
+                            </fieldset>
+                        </div>
+                    </div>
+                </fieldset>
+
+
+            </section>
+            <!-- 
+            Proceed Button
+        -->
+            <!---
+Payment gate way....
+-->
+            <section class="section4">
+                <div id="logo">
+                </div>
+                <div class="info1">
+                    <h1>Your slot is booked</h1>
+                    <p>Your payment has been received</p>
+                    <p class="bringing">Bringing Life Back to Your Workouts <br/> Thanks for choosing fixmymill!</p>
+                </div>
+                
+                <div class="info2">
+                    <h1  id="transaction" class="transcation">Transaction Number:<span id="transaction_id">123456789</span></h1>  
+                    <h1 class="transcation">Amount To Be Paid:<span>00/-</span></h1>
+                </div>
+                <div id="HomeWrap">
+                    <a id="Home" href="index.html" class=" btn  btn-dark font-reg open1 next-step rs_submit_step_one rounded-pill ">
+                        Home</a>
+                </div>
+            </section>
+
+
+
+
+            <div class="button-group">
+                <button type="button" id="btn1"
+                    class="btn font-reg open1 next-step rs_submit_step_one rounded-pill"
+                    style="width:20rem; background-color:black; color: orange;">Proceed >></button>
+            </div>
+        </div>
+        <div class="button-group">
+            <button type="button" id="btn2"
+                class="btn btn-dark font-reg open1 next-step rs_submit_step_one rounded-pill"
+                style="width:20rem;  background-color:black; color: orange;">Pay Now >></button>
+
+
+
+                
+        </div>
+    </div>
+    </div>
+    <div class="button-group">
+        <button type="button" id="btn3" class="btn  font-reg open1 next-step rs_submit_step_one rounded-pill"
+            style="width:20rem ;  color: orange; background-color:black;">Proceed</button>
+    </div>
+    <div class="button-group" style="margin: 1rem;">
+        <a id="previous" class=" font-reg open1 next-step rs_submit_step_one ">
+            << Previous</a>
+    </div>
+    </div>
+    </div>
+
+    <footer  style="background-color: black;">
+        <div class="container">
+            <div class="row footer-row pl-5 pt-5 p-md-5">
+            <div class="col-11 col-lg-5  ml-lg-0">
+              <a href="./index.html" class="flex items-center">
+                <img src="./images/Main logo Fix (1).svg" alt="Main logo Fix (4).png"
+                  style="width:226px; height:111px; object-fit:cover" width="auto" height="118"
+                  fetchpriority="high">
+              </a>
+              <div>
+                <p style="color: white;">Your Trusted Fitness Equipment Service Provider across 25+
+                  Indian Cities. Installation, Maintenance, Repair Services for Residential and Commercial Clients.
+                  Committed to Customer Satisfaction.</p>
+              </div>
+              <div class="socialmediadiv" >
+                <a href="https://www.facebook.com/fixmymill" aria-label="Facebook" class="text-white ms-4 socialmedia" > 
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/fixmymill/" aria-label="Instagram" class="text-white ms-4 socialmedia">
+                  <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/fixmymill/" aria-label="LinkedIn" class="text-white ms-4 socialmedia">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </div>
+    
+            </div>
+            <!-- <div class="col-6 col-md-2">
+                <h2 class="footer-headings mb-3 mt-2" >SERVING IN</h2>
+                <ul >
+                  <li> 
+                    <p>Visakhapatnam</p>
+                  </li>
+                  <li >
+                    <p >Hyderabad</p>
+                  </li>
+                  <li >
+                    <p >Bengaluru</p>
+                  </li>
+                  <li> 
+                    <p  style="text-decoration: underline;">Other Cities</p>
+                  </li>
+                </ul>
+              </div> -->
+              <div class="col-6 col-lg-2">
+                <h2 class="footer-headings mb-3 mt-2" >SERVING IN</h2>
+                    <p>Visakhapatnam</p>
+                    <p >Hyderabad</p>
+                    <p >Bengaluru</p>
+                    <p  style="text-decoration: underline;">Other Cities</p>
+                </ul>
+              </div>
+              <div class="col-6 col-lg-2 ">
+                <h2 class="footer-headings mb-3 mt-2" >QUICK LINKS</h2>
+                    <a href="privacy.html">
+                    <p style="text-decoration: underline;">Privacy Policy</p></a>
+                    <a href="refund.html">
+                    <p style="text-decoration: underline;">Refund Policy</p></a>
+                    <a href="shipping.html">
+                    <p style="text-decoration: underline;">Shipping Policy</p></a>
+                    <a href="responsibilities.html">
+                    <p style="text-decoration: underline;">Terms & Conditions</p></a>
+              </div>
+              <div class="col-8 col-lg-3" >
+                <h2  class="footer-headings mb-3 mt-5 mt-lg-2">CONTACT US</h2>
+                    
+                <a href="tel:08062177481"> <p><i class="fa-solid fa-phone  mr-2 mt-1" style="color: #ffffff; margin-right:15px;" ></i>08062177481</p>
+                    </a>
+                    
+                    <a href="mailto:contact@fixmymill.com">
+                      <p  style="text-decoration: underline;"> <i class="fas fa-envelope mr-2 mt-1" style="color: #ffffff; margin-right:15px;"></i> contact@fixmymill.com</p>
+                    </a>
+                    <p class="mb-0"> <i class="fas fa-map-marker-alt mr-2 mt-1" style="color: #ffffff; margin-right:15px;"></i>   
+                         A-hub, Andhra University, Maddilapalem, Visakhapatnam, 530003, Andhra Pradesh, India</p>
+              </div>
+              <hr  class="mt-5"/>
+             <div  class="col-12 " >
+            <p >© 2023 by Matric Services. All Rights Reserved.
+            </p>
+    
+          </div>
+        </div>
+        </div>
+      </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.12/lottie.min.js"></script>
+    <script src="frm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3RTPTDP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+
+</html>
